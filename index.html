@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Nothing leaves this site: no third-party fonts, scripts, analytics or cookies. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; font-src 'self'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Greenhold · Windows endpoint automation, hosted by you</title>
+  <meta name="description" content="Greenhold runs PowerShell and installs software on your Windows endpoints, on the LAN or over the internet, without opening inbound ports. In development.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 256x256">
+  <style>
+    @font-face {
+      font-family: "Manrope";
+      src: url("fonts/Manrope-Variable.woff2") format("woff2");
+      font-weight: 200 800;
+      font-display: swap;
+    }
+    :root {
+      --page: #F5F3EC;
+      --surface: #FFFFFF;
+      --border: #D9D5C8;
+      --text: #0F2A1F;
+      --secondary: #4A6B5C;
+      --green: #1B5E43;
+      --leaf: #3F8F63;
+      --library: #6A58C2;
+      --dispatch: #2B7899;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #0C1A14;
+        --surface: #13251D;
+        --border: #2A4237;
+        --text: #E8EFEA;
+        --secondary: #9DB5A8;
+        --green: #8CC49F;
+        --leaf: #8CC49F;
+        --library: #B9A9F2;
+        --dispatch: #7CC0DE;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: var(--page);
+      color: var(--text);
+      font-family: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 16px;
+    }
+    .card {
+      width: 100%;
+      max-width: 640px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 56px 48px 44px;
+      text-align: center;
+    }
+    h1 { margin: 0; }
+    .logo { display: block; width: 100%; max-width: 360px; height: auto; margin: 0 auto; }
+    .lead {
+      margin: 32px auto 0;
+      max-width: 30em;
+      font-size: 1.15rem;
+      font-weight: 500;
+    }
+    .modules {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 32px 0 0;
+      padding: 0;
+    }
+    .modules li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 18px 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
+    .modules img { width: 32px; height: 32px; flex-shrink: 0; }
+    .modules strong { display: block; font-weight: 700; }
+    .modules span { color: var(--secondary); font-size: 0.85rem; }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 32px 0 0;
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--secondary);
+    }
+    .status::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--leaf);
+    }
+    footer {
+      padding: 24px 16px 32px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--secondary);
+    }
+    @media (max-width: 520px) {
+      .card { padding: 40px 20px 32px; }
+      .lead { font-size: 1.05rem; }
+      .modules { grid-template-columns: minmax(0, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="card">
+      <h1>
+        <picture>
+          <source srcset="greenhold-wordmark-dark.svg" media="(prefers-color-scheme: dark)">
+          <img class="logo" src="greenhold-wordmark.svg" width="249" height="64" alt="Greenhold">
+        </picture>
+      </h1>
+      <p class="lead">Run PowerShell and install software on every Windows endpoint, over the LAN or the internet, without opening a single inbound port. Hosted by you.</p>
+      <ul class="modules">
+        <li>
+          <picture>
+            <source srcset="library-dark.svg" media="(prefers-color-scheme: dark)">
+            <img src="library.svg" width="32" height="32" alt="">
+          </picture>
+          <div><strong>Greenhold Library</strong><span>Your software, kept current</span></div>
+        </li>
+        <li>
+          <picture>
+            <source srcset="dispatch-dark.svg" media="(prefers-color-scheme: dark)">
+            <img src="dispatch.svg" width="32" height="32" alt="">
+          </picture>
+          <div><strong>Greenhold Dispatch</strong><span>Signed scripts and installs</span></div>
+        </li>
+      </ul>
+      <p class="status">In development</p>
+    </div>
+  </main>
+  <footer>© 2026 Greenhold</footer>
+</body>
+</html>
